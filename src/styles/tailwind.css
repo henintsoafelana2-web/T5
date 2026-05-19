@@ -5,20 +5,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  --background: #0A0F1E;
-  --foreground: #E2E8F0;
+  --background: #F8FAFC;
+  --foreground: #0F172A;
   --primary: #2563EB;
   --primary-foreground: #FFFFFF;
-  --secondary: #1E293B;
-  --secondary-foreground: #94A3B8;
-  --accent: #06B6D4;
+  --secondary: #F1F5F9;
+  --secondary-foreground: #475569;
+  --accent: #0891B2;
   --accent-foreground: #FFFFFF;
-  --muted: #1E293B;
+  --muted: #F1F5F9;
   --muted-foreground: #64748B;
-  --card: #111827;
-  --card-foreground: #E2E8F0;
-  --border: #1E3A5F;
-  --input: #1E293B;
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
+  --border: #E2E8F0;
+  --input: #F1F5F9;
   --ring: #2563EB;
   --radius: 0.75rem;
   --font-sans: 'Plus Jakarta Sans', sans-serif;
@@ -28,7 +28,7 @@
   --success: #10B981;
   --warning: #F59E0B;
   --danger: #EF4444;
-  --info: #06B6D4;
+  --info: #0891B2;
 }
 
 @layer base {
@@ -64,17 +64,17 @@
   }
 
   .glass-card {
-    background: rgba(17, 24, 39, 0.6);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(37, 99, 235, 0.2);
+    border: 1px solid rgba(37, 99, 235, 0.15);
   }
 
   .glass-card-light {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(37, 99, 235, 0.1);
   }
 
   .gradient-text {
@@ -96,9 +96,9 @@
   }
 
   .gradient-bg-hero {
-    background: radial-gradient(ellipse at 20% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 60%),
-                radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
-                #0A0F1E;
+    background: radial-gradient(ellipse at 20% 50%, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.06) 0%, transparent 50%),
+                #F8FAFC;
   }
 
   .gradient-border {
