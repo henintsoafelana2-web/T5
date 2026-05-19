@@ -3,6 +3,7 @@ import HeroSection from './landing-page-home/components/HeroSection';
 import StatsSection from './landing-page-home/components/StatsSection';
 import ClientLogos from './landing-page-home/components/ClientLogos';
 import ServicesSection from './landing-page-home/components/ServicesSection';
+import AllServicesScrollSection from './landing-page-home/components/AllServicesScrollSection';
 import WhyUsSection from './landing-page-home/components/WhyUsSection';
 import ProcessSection from './landing-page-home/components/ProcessSection';
 import PortfolioSection from './landing-page-home/components/PortfolioSection';
@@ -21,6 +22,7 @@ export default function HomePage() {
       <StatsSection />
       <ClientLogos />
       <ServicesSection />
+      <AllServicesScrollSection />
       <WhyUsSection />
       <ProcessSection />
       <PortfolioSection />

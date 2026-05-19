@@ -23,7 +23,7 @@ const navGroups = [
     label: 'Contenu',
     items: [
       { key: 'nav-services', icon: Briefcase, label: 'Services', href: '/admin-services', badge: '6' },
-      { key: 'nav-portfolio', icon: FolderOpen, label: 'Portfolio', href: '/admin-dashboard', badge: null },
+      { key: 'nav-portfolio', icon: FolderOpen, label: 'Portfolio', href: '/admin-portfolio', badge: null },
       { key: 'nav-blog', icon: FileText, label: 'Blog', href: '/admin-dashboard', badge: '2' },
       { key: 'nav-testimonials', icon: Star, label: 'Témoignages', href: '/admin-dashboard', badge: null },
       { key: 'nav-faq', icon: HelpCircle, label: 'FAQ', href: '/admin-dashboard', badge: null },

@@ -45,10 +45,10 @@ export default function ContactSection() {
           {/* Info */}
           <div className="lg:col-span-2 flex flex-col gap-6">
             {[
-              { key: 'contact-loc', icon: MapPin, label: 'Adresse', value: 'Antananarivo, Madagascar', sub: 'Disponible dans toute l\'île' },
-              { key: 'contact-phone', icon: Phone, label: 'Téléphone', value: '+261 XX XX XXX XX', sub: 'Lun–Sam, 8h–18h' },
-              { key: 'contact-email', icon: Mail, label: 'Email', value: 'contact@t5services.mg', sub: 'Réponse sous 2 heures' },
-              { key: 'contact-wa', icon: MessageSquare, label: 'WhatsApp', value: '+261 XX XX XXX XX', sub: 'Chat instantané disponible' },
+              { key: 'contact-loc', icon: MapPin, label: 'Adresse', value: 'Alarobia Amboniloha, 101', sub: 'Antananarivo, Madagascar' },
+              { key: 'contact-phone', icon: Phone, label: 'Téléphone', value: '038 57 228 06', sub: 'Lun–Sam, 8h–18h' },
+              { key: 'contact-email', icon: Mail, label: 'Email', value: 't5.services@gmail.com', sub: 'Réponse sous 2 heures' },
+              { key: 'contact-wa', icon: MessageSquare, label: 'WhatsApp', value: '038 57 228 06', sub: 'Chat instantané disponible' },
             ].map((item) => (
               <div key={item.key} className="glass-card rounded-2xl p-5 flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">

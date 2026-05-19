@@ -53,7 +53,7 @@ const defaultServices: AdminService[] = [
 {
   id: 'svc-2',
   icon: 'Palette',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1765fc254-1779137060020.png",
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_181c8d51f-1779176793602.png",
   title: 'Design UI/UX',
   shortDescription: 'Interfaces utilisateur modernes et intuitives. Prototypage, maquettes Figma, design systems.',
   fullDescription: 'Notre studio de design crée des expériences utilisateur mémorables. Nous combinons recherche utilisateur, design thinking et esthétique moderne pour produire des interfaces qui convertissent et fidélisent. Chaque pixel est pensé pour guider l\'utilisateur vers son objectif.',
@@ -95,7 +95,7 @@ const defaultServices: AdminService[] = [
 {
   id: 'svc-4',
   icon: 'ShoppingCart',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_12688317c-1779137059657.png",
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_184aa559c-1779176794533.png",
   title: 'E-Commerce',
   shortDescription: 'Boutiques en ligne performantes avec gestion des stocks, paiements et livraisons intégrés.',
   fullDescription: 'Lancez votre boutique en ligne avec une solution e-commerce complète et performante. Gestion des produits, des commandes, des paiements mobiles (MVola, Orange Money) et des livraisons. Optimisé pour la conversion et le SEO.',
