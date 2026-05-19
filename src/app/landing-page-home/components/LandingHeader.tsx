@@ -1,8 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import AppLogo from '@/components/ui/AppLogo';
-import { Menu, X, Globe, ChevronDown } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X, Globe, ChevronDown, Sun, Moon } from 'lucide-react';
 import Link from 'next/link';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const navLinks = [
   { label: 'Accueil', href: '#hero', key: 'nav-home' },
@@ -24,6 +25,7 @@ export default function LandingHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [activeLang, setActiveLang] = useState('fr');
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -43,8 +45,17 @@ export default function LandingHeader() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <AppLogo size={36} />
-            <span className="font-sans font-800 text-lg text-foreground group-hover:text-primary transition-colors duration-200 hidden sm:block">
+            <div className="w-9 h-9 rounded-lg overflow-hidden flex-shrink-0 border border-border">
+              <Image
+                src="/assets/images/image-1779177091981.png"
+                alt="T5-Services logo — fond noir, T5 blanc esquissé, texte doré TEAM FIVE SERVICES"
+                width={36}
+                height={36}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+            <span className="font-sans font-bold text-lg text-foreground group-hover:text-primary transition-colors duration-200 hidden sm:block">
               T5-SERVICES
             </span>
           </Link>
@@ -63,7 +74,27 @@ export default function LandingHeader() {
           </nav>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              aria-label={theme === 'light' ? 'Passer en mode bleu' : 'Passer en mode clair'}
+              title={theme === 'light' ? 'Mode Bleu' : 'Mode Clair'}
+              className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-all duration-200 border border-border"
+            >
+              {theme === 'light' ? (
+                <>
+                  <Moon size={16} className="text-primary" />
+                  <span className="hidden sm:inline text-xs font-semibold">Bleu</span>
+                </>
+              ) : (
+                <>
+                  <Sun size={16} className="text-yellow-400" />
+                  <span className="hidden sm:inline text-xs font-semibold">Clair</span>
+                </>
+              )}
+            </button>
+
             {/* Language Switcher */}
             <div className="relative hidden md:block">
               <button
@@ -82,7 +113,7 @@ export default function LandingHeader() {
                       onClick={() => { setActiveLang(lang?.code); setLangOpen(false); }}
                       className={`w-full text-left px-4 py-2.5 text-sm transition-colors duration-150 ${
                         activeLang === lang?.code
-                          ? 'text-primary bg-primary/10' :'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+                          ? 'text-primary bg-primary/10' : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
                       }`}
                     >
                       {lang?.label}
@@ -133,19 +164,26 @@ export default function LandingHeader() {
               {link?.label}
             </a>
           ))}
-          <div className="flex gap-2 mt-2 pt-2 border-t border-border">
+          <div className="flex gap-2 mt-2 pt-2 border-t border-border items-center">
             {languages?.map((lang) => (
               <button
                 key={`mobile-${lang?.key}`}
                 onClick={() => setActiveLang(lang?.code)}
                 className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-all duration-150 ${
                   activeLang === lang?.code
-                    ? 'bg-primary/20 text-primary' :'text-muted-foreground hover:text-foreground'
+                    ? 'bg-primary/20 text-primary' : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
                 {lang?.code?.toUpperCase()}
               </button>
             ))}
+            <button
+              onClick={toggleTheme}
+              className="ml-auto flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border border-border text-muted-foreground hover:text-foreground transition-all duration-150"
+            >
+              {theme === 'light' ? <Moon size={14} /> : <Sun size={14} />}
+              {theme === 'light' ? 'Mode Bleu' : 'Mode Clair'}
+            </button>
           </div>
         </div>
       </div>

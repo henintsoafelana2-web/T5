@@ -1,5 +1,5 @@
 import React from 'react';
-import AppLogo from '@/components/ui/AppLogo';
+import Image from 'next/image';
 import { Globe, Share2, AtSign, Link2, PlayCircle, Mail, Phone, MapPin } from 'lucide-react';
 import Link from 'next/link';
 
@@ -41,7 +41,15 @@ export default function LandingFooter() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <AppLogo size={36} />
+              <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 border border-border">
+                <Image
+                  src="/assets/images/image-1779177091981.png"
+                  alt="T5-Services logo — fond noir, T5 blanc esquissé, texte doré TEAM FIVE SERVICES"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <span className="font-sans text-xl font-bold text-foreground">T5-SERVICES</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-xs">
@@ -49,9 +57,18 @@ export default function LandingFooter() {
               web modernes et performantes depuis 2019.
             </p>
             <div className="flex flex-col gap-2 text-sm text-muted-foreground mb-6">
-              <div className="flex items-center gap-2"><MapPin size={14} className="text-primary shrink-0" /> Antananarivo, Madagascar</div>
-              <div className="flex items-center gap-2"><Phone size={14} className="text-primary shrink-0" /> +261 XX XX XXX XX</div>
-              <div className="flex items-center gap-2"><Mail size={14} className="text-primary shrink-0" /> contact@t5services.mg</div>
+              <div className="flex items-center gap-2">
+                <MapPin size={14} className="text-primary shrink-0" />
+                <span>Alarobia Amboniloha, 101 — Antananarivo</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone size={14} className="text-primary shrink-0" />
+                <a href="tel:+261385722806" className="hover:text-foreground transition-colors">038 57 228 06</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail size={14} className="text-primary shrink-0" />
+                <a href="mailto:t5.services@gmail.com" className="hover:text-foreground transition-colors">t5.services@gmail.com</a>
+              </div>
             </div>
             <div className="flex gap-3">
               {socials?.map((social) => (
@@ -121,7 +138,7 @@ export default function LandingFooter() {
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
           <span>© 2026 T5-SERVICES. Tous droits réservés.</span>
           <span className="flex items-center gap-1.5">
-            Fait avec ❤️ à Antananarivo, Madagascar
+            Fait avec ❤️ à Alarobia Amboniloha, Antananarivo
           </span>
         </div>
       </div>
